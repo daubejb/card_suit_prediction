@@ -9,8 +9,57 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.root.cardsuitprediction.ChooseACardActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World2" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/suitView"
+            android:id="@+id/suittextview"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textSize="25sp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:text="@string/clubsButtonText"
+            android:id="@+id/clubsbutton"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@string/heartsButtonText"
+            android:id="@+id/heartsbutton"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:text="@string/spadesButtonText"
+            android:id="@+id/spadesbutton"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:text="@string/diamondsButtonText"
+            android:id="@+id/diamondsbutton"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@string/resetButtonText"
+            android:id="@+id/resetbutton"
+            android:layout_weight="1" />
+    </LinearLayout>
 </RelativeLayout>
