@@ -27,6 +27,7 @@ public class ChooseACardActivity extends AppCompatActivity implements SensorEven
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
         suitView = (TextView)findViewById(R.id.suittextview);
+        suitView.setVisibility(View.INVISIBLE);
 
         Button clubsButton = (Button)findViewById(R.id.clubsbutton);
 
