@@ -10,14 +10,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.ImageView;
+
 
 import com.example.root.cardsuitprediction.R;
 
 public class ChooseACardActivity extends AppCompatActivity implements SensorEventListener {
     private SensorManager mSensorManager;
     private Sensor mSensor;
-    TextView suitView;
+    private int currentImageID;
+    ImageView suitImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,15 +28,17 @@ public class ChooseACardActivity extends AppCompatActivity implements SensorEven
 
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
-        suitView = (TextView)findViewById(R.id.suittextview);
-        suitView.setVisibility(View.INVISIBLE);
+        suitImageView = (ImageView)findViewById(R.id.clubsImageView);
+        suitImageView.setVisibility(View.INVISIBLE);
+
 
         Button clubsButton = (Button)findViewById(R.id.clubsbutton);
 
         clubsButton.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick (View v) {
-                        suitView.setText("YOU WILL CHOOSE CLUBS");
+                        suitImageView.setVisibility(View.INVISIBLE);
+                        suitImageView = (ImageView)findViewById(R.id.clubsImageView);
                     }
                 }
         );
@@ -44,7 +48,8 @@ public class ChooseACardActivity extends AppCompatActivity implements SensorEven
         heartsButton.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick (View v) {
-                        suitView.setText("YOU WILL CHOOSE HEARTS");
+                        suitImageView.setVisibility(View.INVISIBLE);
+                        suitImageView = (ImageView)findViewById(R.id.heartsImageView);
                     }
                 }
         );
@@ -54,7 +59,8 @@ public class ChooseACardActivity extends AppCompatActivity implements SensorEven
         spadesButton.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick (View v) {
-                        suitView.setText("YOU WILL CHOOSE SPADES");
+                        suitImageView.setVisibility(View.INVISIBLE);
+                        suitImageView = (ImageView)findViewById(R.id.spadesImageView);
                     }
                 }
         );
@@ -64,7 +70,8 @@ public class ChooseACardActivity extends AppCompatActivity implements SensorEven
         diamondsButton.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick (View v) {
-                        suitView.setText("YOU WILL CHOOSE DIAMONDS");
+                        suitImageView.setVisibility(View.INVISIBLE);
+                        suitImageView = (ImageView)findViewById(R.id.diamondsImageView);
                     }
                 }
         );
@@ -74,8 +81,7 @@ public class ChooseACardActivity extends AppCompatActivity implements SensorEven
         resetButton.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick (View v) {
-                        suitView.setText("YOU WILL CHOOSE CLUBS");
-                        suitView.setVisibility(View.INVISIBLE);
+                        suitImageView.setVisibility(View.INVISIBLE);
                     }
                 }
         );
@@ -96,7 +102,7 @@ public class ChooseACardActivity extends AppCompatActivity implements SensorEven
 
     public void onSensorChanged(SensorEvent event) {
         if (event.values[0] > 0.5) {
-            suitView.setVisibility(View.VISIBLE);
+            suitImageView.setVisibility(View.VISIBLE);
 
         }
     }

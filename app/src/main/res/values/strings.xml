@@ -6,4 +6,8 @@
     <string name="diamondsButtonText">YOU WILL CHOOSE DIAMONDS</string>
     <string name="clubsButtonText">YOU WILL CHOOSE CLUBS</string>
     <string name="resetButtonText">RESET</string>
+    <string name="clubsImageViewDescription">Image of a Club</string>
+    <string name="heartsImageViewDescription">Image of a Heart</string>
+    <string name="spadesImageViewDescription">Image of a Spade</string>
+    <string name="diamondsImageViewDescription">Image of a Diamond</string>
 </resources>

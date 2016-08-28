@@ -14,16 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/suitView"
-            android:id="@+id/suittextview"
-            android:layout_gravity="center_horizontal"
-            android:textAlignment="center"
-            android:textSize="25sp"
-            android:visibility="invisible" />
-
         <Button
             android:layout_width="fill_parent"
             android:layout_height="0dp"
@@ -68,4 +58,40 @@
             android:layout_weight="1"
             android:alpha="0" />
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/clubsImageView"
+        android:src="@drawable/clubs"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:contentDescription="@string/heartsImageViewDescription" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/heartsImageView"
+        android:layout_centerInParent="true"
+        android:src="@drawable/hearts"
+        android:visibility="invisible"
+        android:contentDescription="@string/heartsImageViewDescription" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spadesImageView"
+        android:layout_centerInParent="true"
+        android:src="@drawable/spades"
+        android:contentDescription="@string/spadesImageViewDescription"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/diamondsImageView"
+        android:layout_centerInParent="true"
+        android:src="@drawable/diamonds"
+        android:contentDescription="@string/diamondsImageViewDescription"
+        android:visibility="invisible" />
 </RelativeLayout>
